@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html ng-app="app">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Bem vindo">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Os normais em</title>
+    
+    <script
+        src="https://code.jquery.com/jquery-3.1.1.min.js"
+        integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+        crossorigin="anonymous"></script>
+
+    <!-- Latest compiled and minified CSS -->    
+    <link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/flatly/bootstrap.min.css" rel="stylesheet" integrity="sha384-+ENW/yibaokMnme+vBLnHMphUYxHs34h9lpdbSLuAwGkOKFRl4C34WkjazBtb7eT" crossorigin="anonymous">
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>    
+
+</head>
+<body> 
+
+    <div class="container" ng-controller="Testecontroller as c">
+      <br>
+      <img style="display: block;margin-left: auto;margin-right: auto;" src="https://firebasestorage.googleapis.com/v0/b/osnormais-4fe43.appspot.com/o/normais.png?alt=media&token=e3f20390-36b6-40a6-b98b-6e4d665edd51"> </img>
+      <br>
+      <div class="jumbotron">         
+        <form>
+          <div class="form-group">
+            <label class="control-label" for="texto">Texto</label>
+            <textarea type="text" class="form-control" id="texto" ng-model="c.texto"> </textarea>
+          </div>
+        </form>
+
+        <div class="text-center">
+          <button class="btn btn-primary" ng-click="c.alterar()">
+            Alterar
+          </button>
+        </div>             
+      </div>      
+
+      <div class="panel panel-danger" ng-show="c.resultado">
+        <div class="panel-body">
+          {{ c.resultado }}
+        </div>
+      </div>      
+
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+
+    <script src="app/app.js"></script>
+    <script src="app/controller.js"></script>      
+    
+</body>
+</html>
